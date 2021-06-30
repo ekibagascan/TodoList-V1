@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List-V1</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="box" id="heading">
+        <h1> <%= thisDay %></h1>
+    </div>
+    
+        <div class="box">
+            <% for(var i = 0; i < todoList.length; i++){ %> 
+            <div class="item">
+                <input type="checkbox">
+                <p> <%= todoList[i] %> </p>
+            </div>
+            <% } %> 
+            <form class="item" action="/" method="POST">
+                <input type="text" name="todo" placeholder="What have for today?" autocomplete="off">
+                <button type="submit">+</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+<footer>
+    <p>Copyright @EkiBagas 2021</p>
+</footer>
+</html>
